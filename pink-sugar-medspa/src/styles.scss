@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+// Views Lib
+@import '/global/styles/views/landing-page';
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Poppins:ital,wght@0,200;0,600;0,900;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 10px;
+    height: 100vh;
+    width: 100%;
+
+}
+
+body {
+    font-size: 1.6rem;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    // background: #f4f2ec;
+    background: #ffc2ea;
+    font-family: 'poppins', sans-serif;
+}
