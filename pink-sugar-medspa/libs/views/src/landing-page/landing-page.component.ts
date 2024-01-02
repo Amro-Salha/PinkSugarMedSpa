@@ -65,7 +65,7 @@ export class LandingPageComponent implements OnInit {
       duration: 1,
       delay: 2.5,
       opacity: 0,
-      x: -200,
+      x: 200,
     });
 
     gsap.from('.media', {
