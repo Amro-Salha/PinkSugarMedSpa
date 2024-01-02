@@ -4,8 +4,10 @@ psm-landing-page {
 
   .media {
     position: absolute;
-    bottom: 250px;
-    left: 40px;
+    height: 23.6rem;
+    width: 3.2rem;
+    bottom: 10%;
+    left: 3%;
   }
 
   .media ul {
@@ -25,53 +27,142 @@ psm-landing-page {
     display: flex;
     flex-direction: row;
     align-items: center;
-  }
 
-  .stripe {
-    position: absolute;
-    top: 41%;
-    height: 14rem;
-    width: 100%;
-    background: linear-gradient(to right, #ff6acb, #ff11ac);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    span {
-      font-family: "Josefin Sans", sans-serif;
-      color: #f4f2ec;
-      font-size: 12rem;
-      font-weight: 700;
+    .lollipop-syringe {
+      max-height: 50rem;
+      position: absolute;
       z-index: 1;
-      padding-left: 20rem;
-      padding-top: 1rem;
+      right: 52%;
+    }
+
+    .text {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h1 {
+        font-size: 10rem;
+        text-transform: uppercase;
+        font-weight: 900;
+        color: #ff87d6;
+        overflow: hidden;
+        -webkit-text-stroke: 3px #f4f2ec;
+        z-index: 1;
+        position: absolute;
+        bottom: 56%;
+        left: 45%;
+      }
+      .stripe {
+        position: absolute;
+        top: 41%;
+        height: 14rem;
+        width: 100%;
+        background: linear-gradient(to right, #ff6acb, #ff11ac);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        span {
+          font-family: "Josefin Sans", sans-serif;
+          color: #f4f2ec;
+          font-size: 12rem;
+          font-weight: 700;
+          z-index: 1;
+          padding-left: 46rem;
+          padding-top: 1rem;
+        }
+      }
+      h3 {
+        z-index: 1;
+        color: #ff11ac;
+        position: absolute;
+        bottom: 39%;
+        left: 51%;
+        letter-spacing: 1rem;
+        font-weight: 600;
+        text-wrap: nowrap;
+      }
     }
   }
 
-  .lollipop-syringe {
-    max-height: 50rem;
-    position: absolute;
-    z-index: 1;
-    right: 52%;
+  @media (max-width: 1150px) {
+    .wrapper {
+      .lollipop-syringe {
+        max-height: 40rem;
+      }
+
+      .text {
+        h1 {
+          font-size: 7rem;
+        }
+        .stripe {
+          height: 11rem;
+          span {
+            font-size: 9rem;
+            padding-left: 32rem;
+          }
+        }
+        h3 {
+          bottom: 43%;
+          left: 45%;
+        }
+      }
+    }
   }
 
-  .text {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  @media (max-width: 885px) {
+    .wrapper {
+      .lollipop-syringe {
+        max-height: 30rem;
+      }
+      .text {
+        h1 {
+          font-size: 5rem;
+          bottom: 57%;
+          left: 49%;
+        }
+        .stripe {
+          height: 9rem;
+          span {
+            font-size: 7rem;
+            padding-left: 29rem;
+          }
+        }
+        h3 {
+          font-size: 1.6rem;
+          bottom: 45.5%;
+          left: 47%;
+          letter-spacing: 0.7rem;
+        }
+      }
+    }
   }
 
-  .text h1 {
-    font-size: 9rem;
-    text-transform: uppercase;
-    font-weight: 900;
-    //   color: #555555;
-    color: #ff96db;
-    overflow: hidden;
-    -webkit-text-stroke: 3px #f4f2ec;
-    z-index: 1;
-    position: absolute;
-    bottom: 56%;
-    left: 45%;
+  @media (max-width: 685px) {
+    .wrapper {
+      .lollipop-syringe {
+        max-height: 19rem;
+        bottom: 43%;
+      }
+      .text {
+        h1 {
+          font-size: 3rem;
+          bottom: 58%;
+          -webkit-text-stroke: 1.5px #f4f2ec;
+        }
+        .stripe {
+          height: 7rem;
+          span {
+            font-size: 5rem;
+            padding-left: 17.5rem;
+          }
+        }
+        h3 {
+          bottom: 48.5%;
+          left: 49%;
+          font-size: 1.2rem;
+          letter-spacing: 0.2rem;
+        }
+      }
+    }
   }
 }
