@@ -1,0 +1,9 @@
+<div class="services-wrapper">
+  <psm-service
+    *ngFor="let service of services"
+    [serviceName]="service.serviceName"
+    [serviceDescription]="service.serviceDescription"
+    [displayImage]="service.displayImage"
+    [comingSoon]="service.comingSoon"
+  ></psm-service>
+</div>

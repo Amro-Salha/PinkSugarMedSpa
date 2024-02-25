@@ -3,14 +3,17 @@ psm-navbar {
   justify-content: center;
   align-items: center;
   width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
   .navbar {
     display: flex;
     justify-content: space-between;
     height: 8rem;
     align-items: center;
-    color: #555555;
     width: 90%;
-    .logo {
+    .navLogo {
       font-size: 1.4rem;
       text-transform: uppercase;
       font-weight: 900;
@@ -19,9 +22,7 @@ psm-navbar {
       width: 25%;
       align-items: center;
       text-align: center;
-      p {
-        font-size: 1.1rem;
-      }
+      cursor: pointer;
     }
     .categories {
       display: flex;
@@ -34,6 +35,16 @@ psm-navbar {
       gap: 5rem;
       width: 50%;
       text-wrap: nowrap;
+      .category {
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        font-weight: inherit;
+        font-size: inherit;
+        font-family: inherit;
+        color: inherit;
+        text-transform: uppercase;
+      }
     }
     .menu {
       font-size: 2rem;

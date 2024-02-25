@@ -1,5 +1,8 @@
 // Views Lib
 @import "/global/styles/views/landing-page";
+@import "/global/styles/views/services-page";
+
+// Components Lib
 @import "/global/styles/components/navbar";
 
 // Fonts
@@ -9,6 +12,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #ff3787;
 }
 html {
   font-size: 10px;
@@ -20,8 +24,7 @@ body {
   font-size: 1.6rem;
   height: 100vh;
   width: 100%;
-  overflow: hidden;
-  // background: #f4f2ec;
-  background: #ffc2ea;
+  padding-top: 8rem;
+  background: #ffcfee;
   font-family: "poppins", sans-serif;
 }

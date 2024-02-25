@@ -1,166 +1,20 @@
 psm-landing-page {
+  display: flex;
   width: 100%;
   height: 100%;
+  align-items: center;
+  justify-content: center;
 
-  .media {
-    position: absolute;
-    bottom: 10rem;
-    left: 3%;
-    ul li {
-      list-style: none;
-      color: #555555;
-      padding: 10px 0;
-    }
+  .logo {
+    width: 40vw;
+    height: auto;
+    max-height: 70rem;
+    z-index: 1;
   }
 
-  .wrapper {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    .lollipop-syringe {
-      max-height: 50rem;
-      position: absolute;
-      z-index: 1;
-      right: 52%;
-    }
-
-    .text {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      position: absolute;
-      top: 41%;
-      h1 {
-        font-size: 10rem;
-        text-transform: uppercase;
-        font-weight: 900;
-        color: #ff87d6;
-        overflow: hidden;
-        -webkit-text-stroke: 3px #f4f2ec;
-        z-index: 1;
-        position: absolute;
-        margin-top: -12rem;
-        left: 45%;
-      }
-      .stripe {
-        position: absolute;
-        transform-origin: left center;
-        top: 41%;
-        height: 14rem;
-        width: 100%;
-        background: linear-gradient(to right, #ff6acb, #ff11ac);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        span {
-          opacity: 0;
-          font-family: "Josefin Sans", sans-serif;
-          color: #f4f2ec;
-          font-size: 12rem;
-          font-weight: 700;
-          z-index: 1;
-          padding-left: 46rem;
-          padding-top: 1rem;
-        }
-      }
-      h3 {
-        z-index: 1;
-        color: #ff11ac;
-        position: absolute;
-        margin-top: 14rem;
-        left: 53%;
-        letter-spacing: 1rem;
-        font-weight: 600;
-        text-wrap: nowrap;
-      }
-    }
-  }
-
-  @media (max-width: 1150px) {
-    .wrapper {
-      .lollipop-syringe {
-        max-height: 40rem;
-      }
-
-      .text {
-        h1 {
-          margin-top: -8.5rem;
-          font-size: 7rem;
-        }
-        .stripe {
-          height: 11rem;
-          span {
-            font-size: 9rem;
-            padding-left: 32rem;
-          }
-        }
-        h3 {
-          margin-top: 11rem;
-          left: 47%;
-        }
-      }
-    }
-  }
-
-  @media (max-width: 885px) {
-    .wrapper {
-      .lollipop-syringe {
-        max-height: 30rem;
-      }
-      .text {
-        h1 {
-          font-size: 5rem;
-          margin-top: -6rem;
-          left: 49%;
-        }
-        .stripe {
-          height: 9rem;
-          span {
-            font-size: 7rem;
-            padding-left: 29rem;
-          }
-        }
-        h3 {
-          font-size: 1.6rem;
-          margin-top: 9rem;
-          left: 49.5%;
-          letter-spacing: 0.7rem;
-        }
-      }
-    }
-  }
-
-  @media (max-width: 685px) {
-    .wrapper {
-      .lollipop-syringe {
-        max-height: 19rem;
-        bottom: 43%;
-      }
-      .text {
-        h1 {
-          font-size: 3rem;
-          margin-top: -3.7rem;
-          -webkit-text-stroke: 1.5px #f4f2ec;
-        }
-        .stripe {
-          height: 7rem;
-          span {
-            font-size: 5rem;
-            padding-left: 17.5rem;
-          }
-        }
-        h3 {
-          margin-top: 7rem;
-          left: 51%;
-          font-size: 1.2rem;
-          letter-spacing: 0.2rem;
-        }
-      }
+  @media (max-width: 700px) {
+    .logo {
+      width: 65vw;
     }
   }
 }

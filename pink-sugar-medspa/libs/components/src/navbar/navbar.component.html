@@ -1,11 +1,11 @@
 <nav class="navbar">
-  <div class="logo">
+  <div (click)="goToHomePage()" class="navLogo">
     Pink Sugar Medspa
     <p>♥</p>
   </div>
   <div class="categories">
-    <p>Services</p>
-    <p>Contact Us</p>
+    <button (click)="goToServicePage()" class="category">Services</button>
+    <button class="category">Contact Us</button>
   </div>
   <div class="menu">
     <ion-icon name="menu"></ion-icon>
