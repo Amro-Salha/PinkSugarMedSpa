@@ -12,12 +12,14 @@ psm-services-page {
     flex-direction: column;
     align-items: center;
     overflow-y: scroll;
+    background: #ffcfee;
   }
   psm-service {
     display: flex;
     flex-direction: row;
     border: 1px solid white;
     width: 100%;
+    gap: 2rem;
     img {
       max-width: 30rem;
       max-height: 30rem;

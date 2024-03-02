@@ -1,13 +1,36 @@
-<nav class="navbar">
-  <div (click)="goToHomePage()" class="navLogo">
-    Pink Sugar Medspa
-    <p>♥</p>
-  </div>
-  <div class="categories">
-    <button (click)="goToServicePage()" class="category">Services</button>
-    <button class="category">Contact Us</button>
-  </div>
-  <div class="menu">
-    <ion-icon name="menu"></ion-icon>
-  </div>
-</nav>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav position="end" mode="side" opened="false">
+    <mat-nav-list class="nav-list">
+      <a (click)="sidenav.close()" routerLink="/home" class="nav-item">
+        Home
+      </a>
+      <a (click)="sidenav.close()" routerLink="/services" class="nav-item">
+        Services
+      </a>
+      <a class="nav-item">Contact Us</a>
+      <a class="nav-item">Schedule an Appointment</a>
+      <a class="nav-item">About Us</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="navbar-wrapper">
+      <mat-toolbar class="navbar">
+        <div routerLink="/home" class="navLogo">
+          <img src="assets/logo.png" />
+        </div>
+        <div class="categories">
+          <a routerLink="/services" class="category">Services</a>
+          <a class="category">Contact Us</a>
+          <a class="category">Schedule an Appointment</a>
+          <a class="category">About Us</a>
+        </div>
+        <div class="menu">
+          <button (click)="sidenav.toggle()">
+            <ion-icon name="menu"></ion-icon>
+          </button>
+        </div>
+      </mat-toolbar>
+    </div>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
