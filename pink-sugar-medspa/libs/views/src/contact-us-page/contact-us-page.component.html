@@ -1,0 +1,45 @@
+<div class="contact-us-wrapper">
+  <div class="contact-us-text">
+    <h1 class="contact-us-title">Contact Us</h1>
+    <h3 class="contact-us-description">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.
+    </h3>
+  </div>
+  <div class="form-wrapper">
+    <div class="form-dialog">
+      <form class="form">
+        <div class="name">
+          <mat-form-field>
+            <mat-label>First Name</mat-label>
+            <input matInput placeholder="Ex. John" />
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Last Name</mat-label>
+            <input matInput placeholder="Ex. Doe" />
+          </mat-form-field>
+        </div>
+        <div class="additional-info">
+          <mat-form-field>
+            <mat-label>Phone Number</mat-label>
+            <input matInput placeholder="Ex. 000-000-0000" />
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Ex. John.Doe@email.com" />
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Additional Info</mat-label>
+            <textarea
+              matInput
+              placeholder="Ex. I would like more information on the following service..."
+            ></textarea>
+          </mat-form-field>
+        </div>
+        <button mat-raised-button (click)="onSubmit()">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

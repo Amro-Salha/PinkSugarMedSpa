@@ -11,20 +11,4 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
   imports: [CommonModule, MatSidenavModule, AppRoutingModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class NavbarComponent {
-  @ViewChild('sidenav')
-  protected sidenav!: MatSidenav;
-
-  constructor(private router: Router) {}
-
-  public goToHomePage() {
-    this.router.navigate(['/home']);
-  }
-  public goToServicePage() {
-    this.router.navigate(['/services']);
-  }
-  protected toggleSideNav() {
-    // this.showSideNav = !this.showSideNav;
-    this.sidenav.toggle();
-  }
-}
+export class NavbarComponent {}

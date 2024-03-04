@@ -4,6 +4,7 @@
 // Views Lib
 @import "/global/styles/views/landing-page";
 @import "/global/styles/views/services-page";
+@import "/global/styles/views/contact-us-page";
 
 // Components Lib
 @import "/global/styles/components/navbar";
@@ -19,7 +20,7 @@
 }
 html {
   font-size: 10px;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   // padding-top: 15rem;
 }
@@ -30,4 +31,5 @@ body {
   width: 100%;
   background: #ffcfee;
   font-family: "poppins", sans-serif;
+  overflow: hidden;
 }

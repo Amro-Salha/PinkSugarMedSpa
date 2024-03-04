@@ -7,7 +7,9 @@
       <a (click)="sidenav.close()" routerLink="/services" class="nav-item">
         Services
       </a>
-      <a class="nav-item">Contact Us</a>
+      <a (click)="sidenav.close()" routerLink="/contact-us" class="nav-item"
+        >Contact Us</a
+      >
       <a class="nav-item">Schedule an Appointment</a>
       <a class="nav-item">About Us</a>
     </mat-nav-list>
@@ -20,7 +22,7 @@
         </div>
         <div class="categories">
           <a routerLink="/services" class="category">Services</a>
-          <a class="category">Contact Us</a>
+          <a routerLink="/contact-us" class="category">Contact Us</a>
           <a class="category">Schedule an Appointment</a>
           <a class="category">About Us</a>
         </div>
@@ -31,6 +33,8 @@
         </div>
       </mat-toolbar>
     </div>
-    <router-outlet></router-outlet>
+    <div class="outlet">
+      <router-outlet></router-outlet>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
