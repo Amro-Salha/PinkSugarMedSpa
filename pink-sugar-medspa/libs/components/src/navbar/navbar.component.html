@@ -1,13 +1,27 @@
 <mat-sidenav-container>
   <mat-sidenav #sidenav position="end" mode="side" opened="false">
     <mat-nav-list class="nav-list">
-      <a (click)="sidenav.close()" routerLink="/home" class="nav-item">
+      <a
+        (click)="sidenav.close()"
+        routerLink="/home"
+        routerLinkActive="active-link"
+        class="nav-item"
+      >
         Home
       </a>
-      <a (click)="sidenav.close()" routerLink="/services" class="nav-item">
+      <a
+        (click)="sidenav.close()"
+        routerLink="/services"
+        routerLinkActive="active-link"
+        class="nav-item"
+      >
         Services
       </a>
-      <a (click)="sidenav.close()" routerLink="/contact-us" class="nav-item"
+      <a
+        (click)="sidenav.close()"
+        routerLink="/contact-us"
+        routerLinkActive="active-link"
+        class="nav-item"
         >Contact Us</a
       >
       <a class="nav-item">Schedule an Appointment</a>
@@ -21,8 +35,18 @@
           <img src="assets/logo.png" />
         </div>
         <div class="categories">
-          <a routerLink="/services" class="category">Services</a>
-          <a routerLink="/contact-us" class="category">Contact Us</a>
+          <a
+            routerLink="/services"
+            routerLinkActive="active-link"
+            class="category"
+            >Services</a
+          >
+          <a
+            routerLink="/contact-us"
+            routerLinkActive="active-link"
+            class="category"
+            >Contact Us</a
+          >
           <a class="category">Schedule an Appointment</a>
           <a class="category">About Us</a>
         </div>

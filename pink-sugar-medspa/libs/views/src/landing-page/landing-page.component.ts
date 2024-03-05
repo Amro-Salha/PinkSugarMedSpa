@@ -21,7 +21,7 @@ export class LandingPageComponent implements OnInit {
       .to('.logo', { scale: 1.1, duration: 1 });
 
     gsap.from('.logo', {
-      duration: 4,
+      duration: 2,
       opacity: 0,
     });
   }

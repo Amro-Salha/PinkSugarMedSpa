@@ -2,6 +2,7 @@ psm-navbar {
   .outlet {
     height: 85vh;
     overflow: scroll;
+    background-color: #ffbcdf;
   }
   .navbar-wrapper {
     display: flex;
@@ -52,6 +53,9 @@ psm-navbar {
           color: inherit;
           text-transform: uppercase;
         }
+        .active-link {
+          border-bottom: 3px solid #ff3787;
+        }
       }
       .menu {
         font-size: 3rem;
@@ -79,6 +83,9 @@ psm-navbar {
       border: 1px solid white;
       padding: 2rem 1rem;
       border-bottom: 1px solid #ff3787;
+    }
+    .active-link {
+      background-color: #ffeff9;
     }
   }
 

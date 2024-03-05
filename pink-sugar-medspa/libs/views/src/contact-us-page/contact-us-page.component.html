@@ -10,35 +10,39 @@
   </div>
   <div class="form-wrapper">
     <div class="form-dialog">
-      <form class="form">
-        <div class="name">
-          <mat-form-field>
-            <mat-label>First Name</mat-label>
-            <input matInput placeholder="Ex. John" />
-          </mat-form-field>
-          <mat-form-field>
-            <mat-label>Last Name</mat-label>
-            <input matInput placeholder="Ex. Doe" />
-          </mat-form-field>
+      <form>
+        <div class="form">
+          <div class="name">
+            <mat-form-field>
+              <mat-label>First Name</mat-label>
+              <input matInput placeholder="Ex. John" />
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>Last Name</mat-label>
+              <input matInput placeholder="Ex. Doe" />
+            </mat-form-field>
+          </div>
+          <div class="additional-info">
+            <mat-form-field>
+              <mat-label>Phone Number</mat-label>
+              <input matInput placeholder="Ex. 000-000-0000" />
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="Ex. John.Doe@email.com" />
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>Additional Info</mat-label>
+              <textarea
+                matInput
+                placeholder="Ex. I would like more information on the following service..."
+              ></textarea>
+            </mat-form-field>
+          </div>
+          <div class="submit">
+            <button mat-flat-button (click)="onSubmit()">Submit</button>
+          </div>
         </div>
-        <div class="additional-info">
-          <mat-form-field>
-            <mat-label>Phone Number</mat-label>
-            <input matInput placeholder="Ex. 000-000-0000" />
-          </mat-form-field>
-          <mat-form-field>
-            <mat-label>Email</mat-label>
-            <input matInput placeholder="Ex. John.Doe@email.com" />
-          </mat-form-field>
-          <mat-form-field>
-            <mat-label>Additional Info</mat-label>
-            <textarea
-              matInput
-              placeholder="Ex. I would like more information on the following service..."
-            ></textarea>
-          </mat-form-field>
-        </div>
-        <button mat-raised-button (click)="onSubmit()">Submit</button>
       </form>
     </div>
   </div>

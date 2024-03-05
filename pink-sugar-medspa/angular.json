@@ -24,7 +24,10 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/psmTheme.scss", "src/styles.scss"],
+            "styles": [
+              "global/styles/psmTheme.scss",
+              "global/styles/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -86,7 +89,10 @@
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/psmTheme.scss", "src/styles.scss"],
+            "styles": [
+              "global/styles/psmTheme.scss",
+              "global/styles/styles.scss"
+            ],
             "scripts": []
           }
         }
