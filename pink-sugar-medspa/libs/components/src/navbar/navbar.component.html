@@ -29,36 +29,38 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <div class="navbar-wrapper">
-      <mat-toolbar class="navbar">
-        <div routerLink="/home" class="navLogo">
-          <img src="assets/logo.png" />
-        </div>
-        <div class="categories">
-          <a
-            routerLink="/services"
-            routerLinkActive="active-link"
-            class="category"
-            >Services</a
-          >
-          <a
-            routerLink="/contact-us"
-            routerLinkActive="active-link"
-            class="category"
-            >Contact Us</a
-          >
-          <a class="category">Schedule an Appointment</a>
-          <a class="category">About Us</a>
-        </div>
-        <div class="menu">
-          <button (click)="sidenav.toggle()">
-            <ion-icon name="menu"></ion-icon>
-          </button>
-        </div>
-      </mat-toolbar>
-    </div>
-    <div class="outlet">
-      <router-outlet></router-outlet>
+    <div class="content">
+      <div class="navbar-wrapper">
+        <mat-toolbar class="navbar">
+          <div routerLink="/home" class="navLogo">
+            <img src="assets/logo.png" />
+          </div>
+          <div *ngIf="!isMobile" class="categories">
+            <a
+              routerLink="/services"
+              routerLinkActive="active-link"
+              class="category"
+              >Services</a
+            >
+            <a
+              routerLink="/contact-us"
+              routerLinkActive="active-link"
+              class="category"
+              >Contact Us</a
+            >
+            <a class="category">Schedule an Appointment</a>
+            <a class="category">About Us</a>
+          </div>
+          <div class="menu">
+            <button *ngIf="isMobile" (click)="sidenav.toggle()">
+              <mat-icon fontIcon="menu"></mat-icon>
+            </button>
+          </div>
+        </mat-toolbar>
+      </div>
+      <div class="outlet">
+        <router-outlet></router-outlet>
+      </div>
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
