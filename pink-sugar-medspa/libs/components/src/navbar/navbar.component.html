@@ -1,66 +1,74 @@
-<mat-sidenav-container>
-  <mat-sidenav #sidenav position="end" mode="side" opened="false">
-    <mat-nav-list class="nav-list">
-      <a
-        (click)="sidenav.close()"
-        routerLink="/home"
-        routerLinkActive="active-link"
-        class="nav-item"
-      >
-        Home
-      </a>
-      <a
-        (click)="sidenav.close()"
-        routerLink="/services"
-        routerLinkActive="active-link"
-        class="nav-item"
-      >
-        Services
-      </a>
-      <a
-        (click)="sidenav.close()"
-        routerLink="/contact-us"
-        routerLinkActive="active-link"
-        class="nav-item"
-        >Contact Us</a
-      >
-      <a class="nav-item">Schedule an Appointment</a>
-      <a class="nav-item">About Us</a>
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <div class="content">
-      <div class="navbar-wrapper">
-        <mat-toolbar class="navbar">
-          <div routerLink="/home" class="navLogo">
-            <img src="assets/logo.png" />
-          </div>
-          <div *ngIf="!isMobile" class="categories">
-            <a
-              routerLink="/services"
-              routerLinkActive="active-link"
-              class="category"
-              >Services</a
-            >
-            <a
-              routerLink="/contact-us"
-              routerLinkActive="active-link"
-              class="category"
-              >Contact Us</a
-            >
-            <a class="category">Schedule an Appointment</a>
-            <a class="category">About Us</a>
-          </div>
-          <div class="menu">
-            <button *ngIf="isMobile" (click)="sidenav.toggle()">
-              <mat-icon fontIcon="menu"></mat-icon>
-            </button>
-          </div>
-        </mat-toolbar>
+<ng-container *ngIf="underConstruction; else live">
+  <div class="under-construction">
+    <h1>WEBSITE UNDER CONSTRUCTION</h1>
+  </div>
+</ng-container>
+
+<ng-template #live>
+  <mat-sidenav-container #live>
+    <mat-sidenav #sidenav position="end" mode="side" opened="false">
+      <mat-nav-list class="nav-list">
+        <a
+          (click)="sidenav.close()"
+          routerLink="/home"
+          routerLinkActive="active-link"
+          class="nav-item"
+        >
+          Home
+        </a>
+        <a
+          (click)="sidenav.close()"
+          routerLink="/services"
+          routerLinkActive="active-link"
+          class="nav-item"
+        >
+          Services
+        </a>
+        <a
+          (click)="sidenav.close()"
+          routerLink="/contact-us"
+          routerLinkActive="active-link"
+          class="nav-item"
+          >Contact Us</a
+        >
+        <a class="nav-item">Schedule an Appointment</a>
+        <a class="nav-item">About Us</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="content">
+        <div class="navbar-wrapper">
+          <mat-toolbar class="navbar">
+            <div routerLink="/home" class="navLogo">
+              <img src="assets/logo.png" />
+            </div>
+            <div *ngIf="!isMobile" class="categories">
+              <a
+                routerLink="/services"
+                routerLinkActive="active-link"
+                class="category"
+                >Services</a
+              >
+              <a
+                routerLink="/contact-us"
+                routerLinkActive="active-link"
+                class="category"
+                >Contact Us</a
+              >
+              <a class="category">Schedule an Appointment</a>
+              <a class="category">About Us</a>
+            </div>
+            <div class="menu">
+              <button *ngIf="isMobile" (click)="sidenav.toggle()">
+                <mat-icon fontIcon="menu"></mat-icon>
+              </button>
+            </div>
+          </mat-toolbar>
+        </div>
+        <div class="outlet">
+          <router-outlet></router-outlet>
+        </div>
       </div>
-      <div class="outlet">
-        <router-outlet></router-outlet>
-      </div>
-    </div>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</ng-template>
