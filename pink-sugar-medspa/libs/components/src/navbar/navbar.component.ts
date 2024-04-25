@@ -26,7 +26,7 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
 })
 export class NavbarComponent implements OnInit {
   protected isMobile: boolean = false;
-  protected underConstruction: boolean = true;
+  protected underConstruction: boolean = false;
 
   ngOnInit(): void {
     this.isMobileDevice();

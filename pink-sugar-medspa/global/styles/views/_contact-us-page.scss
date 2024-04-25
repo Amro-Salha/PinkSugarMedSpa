@@ -8,8 +8,14 @@
     flex-direction: column;
     justify-content: center;
     padding: 10rem;
+    .title {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+    }
     .contact-us-description {
-      font-weight: 400;
+      font-weight: 600;
       padding-bottom: 10rem;
     }
   }

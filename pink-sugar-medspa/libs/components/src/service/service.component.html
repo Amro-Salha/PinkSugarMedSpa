@@ -1,6 +1,13 @@
 <img src="{{ displayImage }}" />
 
 <div class="service-description">
-  <h1>{{ serviceName }}</h1>
-  <p>{{ serviceDescription }}</p>
+  <div class="title">
+    <h1>{{ serviceName }}</h1>
+    <mat-icon fontIcon="favorite_border"></mat-icon>
+  </div>
+
+  <div class="description" *ngFor="let bulletPoint of serviceDescription">
+    <mat-icon fontIcon="favorite"></mat-icon>
+    <p>{{ bulletPoint }}</p>
+  </div>
 </div>
