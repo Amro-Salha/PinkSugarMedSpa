@@ -17,39 +17,45 @@ psm-services-page {
     psm-service {
       display: flex;
       flex-direction: row;
+      align-items: center;
       border: 1px solid white;
       border-radius: 1rem;
       width: 100%;
       gap: 2rem;
+      background-color: #ffffff3d;
       img {
         border-radius: 1rem;
         max-width: 30rem;
         max-height: 30rem;
         width: 30vw;
         height: 30vw;
+        min-height: 30rem;
+        min-width: 30rem;
+        margin: 1rem;
       }
       .service-description {
         display: flex;
         flex-direction: column;
         width: 100%;
         .title {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          gap: 1rem;
           padding-bottom: 1rem;
         }
 
         .description {
           display: flex;
           width: 100%;
-          flex-direction: row;
+          flex-direction: column;
           font-weight: 600;
-          mat-icon {
-            font-size: 10px;
-            overflow: visible;
-            padding-top: 0.5rem;
-            padding-right: 0.2rem;
+          padding: 1rem;
+          .bullet {
+            display: flex;
+            flex-direction: row;
+            mat-icon {
+              font-size: 10px;
+              overflow: visible;
+              padding-top: 0.5rem;
+              padding-right: 0.2rem;
+            }
           }
         }
       }
@@ -60,6 +66,12 @@ psm-services-page {
       width: 100%;
       psm-service {
         flex-direction: column;
+        align-items: center;
+        .service-description {
+          .title {
+            text-align: center;
+          }
+        }
       }
     }
   }

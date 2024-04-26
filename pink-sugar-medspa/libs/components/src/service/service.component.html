@@ -2,12 +2,13 @@
 
 <div class="service-description">
   <div class="title">
-    <h1>{{ serviceName }}</h1>
-    <mat-icon fontIcon="favorite_border"></mat-icon>
+    <h1>{{ serviceName }} <mat-icon fontIcon="favorite_border"></mat-icon></h1>
   </div>
 
-  <div class="description" *ngFor="let bulletPoint of serviceDescription">
-    <mat-icon fontIcon="favorite"></mat-icon>
-    <p>{{ bulletPoint }}</p>
+  <div class="description">
+    <div class="bullet" *ngFor="let bulletPoint of serviceDescription">
+      <mat-icon fontIcon="favorite"></mat-icon>
+      <p>{{ bulletPoint }}</p>
+    </div>
   </div>
 </div>
