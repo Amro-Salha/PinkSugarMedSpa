@@ -7,6 +7,7 @@ export interface Service {
   serviceDescription: string[];
   comingSoon?: boolean;
   displayImage: string;
+  price?: number;
 }
 
 @Component({
@@ -29,6 +30,7 @@ export class ServicesPageComponent {
         'FDA Approved',
       ],
       displayImage: 'assets/vybePhoto.webp',
+      price: 850,
     },
     {
       serviceName: 'SKINPEN Microneedling',
@@ -40,9 +42,10 @@ export class ServicesPageComponent {
         'SkinPen is surrounded by a custom-designed BioSheath that guarantees sterility to prevent cross contamination between procedures.',
       ],
       displayImage: 'assets/skinPen.jpg',
+      price: 350,
     },
     {
-      serviceName: 'PRIÉME Luxury Medical Facial',
+      serviceName: 'PRÉIME Luxury Medical Facial',
       serviceDescription: [
         'The worlds most advanced aesthetic facial device',
         'One of a kind luxury medical grade, 5 Tier facial rejuvenation system',
@@ -51,6 +54,7 @@ export class ServicesPageComponent {
         'Clinically proven to result in healthier, tighter, smoother skin',
       ],
       displayImage: 'assets/priemePhoto.png',
+      price: 399,
     },
     {
       serviceName: 'INLEI Lash Lift and Tint',
@@ -62,6 +66,7 @@ export class ServicesPageComponent {
         'All InLei products are made in Italy',
       ],
       displayImage: 'assets/lashLiftPhoto.webp',
+      price: 150,
     },
     {
       serviceName: 'INLEI Brow Lamination and Tint',
@@ -72,6 +77,7 @@ export class ServicesPageComponent {
         'All InLei products are made in Italy',
       ],
       displayImage: 'assets/browTintPhoto.webp',
+      price: 150,
     },
   ];
 }

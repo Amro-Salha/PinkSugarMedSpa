@@ -20,4 +20,7 @@ export class ServiceComponent {
 
   @Input()
   public comingSoon?: boolean;
+
+  @Input()
+  public price?: number;
 }

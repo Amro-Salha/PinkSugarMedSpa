@@ -1,4 +1,7 @@
 psm-navbar {
+  .mat-drawer-side.mat-drawer-end {
+    width: 100%;
+  }
   .under-construction {
     width: 100vw;
     height: 100vh;
@@ -64,6 +67,15 @@ psm-navbar {
           border-bottom: 3px solid #ff3787;
         }
       }
+      .call {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        font-weight: 600;
+        width: 50%;
+        text-decoration: none;
+      }
       .menu {
         width: 25%;
         display: flex;
@@ -85,6 +97,8 @@ psm-navbar {
     height: 100%;
     .nav-item {
       text-align: center;
+      background-color: transparent;
+      font-weight: 600;
       text-decoration: none;
       color: inherit;
       text-transform: uppercase;
@@ -101,5 +115,20 @@ psm-navbar {
     display: flex;
     flex-direction: column;
     font-weight: 600;
+  }
+}
+
+@media (max-width: 1000px) {
+  psm-navbar {
+    .navbar-wrapper {
+      .navbar {
+        width: 100%;
+        .navLogo {
+          img {
+            max-width: 11rem;
+          }
+        }
+      }
+    }
   }
 }

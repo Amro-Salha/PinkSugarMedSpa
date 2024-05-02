@@ -31,8 +31,9 @@
           class="nav-item"
           >Contact Us</a
         >
-        <a class="nav-item">Schedule an Appointment</a>
-        <a class="nav-item">About Us</a>
+        <!-- <a class="nav-item">Schedule an Appointment</a> -->
+        <!-- <a class="nav-item">About Us</a> -->
+        <button class="nav-item" (click)="sidenav.toggle()">x</button>
       </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
@@ -56,8 +57,12 @@
                 >Contact Us</a
               >
               <!-- <a class="category">Schedule an Appointment</a> -->
-              <a class="category">About Us</a>
+              <!-- <a class="category">About Us</a> -->
             </div>
+            <a *ngIf="isMobile" href="tel:+19733339377" class="call">
+              <mat-icon fontIcon="call"></mat-icon>
+              973-333-9377
+            </a>
             <div class="menu">
               <button *ngIf="isMobile" (click)="sidenav.toggle()">
                 <mat-icon fontIcon="menu"></mat-icon>

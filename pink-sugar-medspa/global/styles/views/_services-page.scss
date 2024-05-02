@@ -23,6 +23,7 @@ psm-services-page {
       width: 100%;
       gap: 2rem;
       background-color: #ffffff3d;
+      position: relative;
       img {
         border-radius: 1rem;
         max-width: 30rem;
@@ -39,8 +40,9 @@ psm-services-page {
         width: 100%;
         .title {
           padding-bottom: 1rem;
+          display: flex;
+          justify-content: space-between;
         }
-
         .description {
           display: flex;
           width: 100%;
@@ -59,9 +61,15 @@ psm-services-page {
           }
         }
       }
+      .pricetag {
+        font-weight: 600;
+        font-size: 1.8rem;
+        text-align: center;
+        padding-right: 2rem;
+      }
     }
   }
-  @media (max-width: 800px) {
+  @media (max-width: 900px) {
     .services-wrapper {
       width: 100%;
       psm-service {
