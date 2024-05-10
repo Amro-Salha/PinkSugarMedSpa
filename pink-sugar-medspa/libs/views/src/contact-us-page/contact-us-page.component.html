@@ -12,45 +12,76 @@
       you soon!
     </h3>
     <div class="info">
-      <p>973-333-9377</p>
+      <p><mat-icon fontIcon="call"></mat-icon>973-333-9377</p>
       <p>502 Hamburg Tpk, Ste 208, Wayne, NJ 07470</p>
-      <p>CONTEMPORARY BEAUTY x ADVANCED SCIENCE</p>
+      <p class="tagline">
+        CONTEMPORARY BEAUTY x ADVANCED SCIENCE
+        <mat-icon fontIcon="favorite_border"></mat-icon>
+      </p>
       <p>&#64;pinksugarmedspa</p>
     </div>
   </div>
   <div class="form-wrapper">
     <div class="form-dialog">
-      <form>
+      <form (ngSubmit)="onSubmit(form.value)" #form="ngForm">
         <div class="form">
           <div class="name">
             <mat-form-field>
               <mat-label>First Name</mat-label>
-              <input matInput placeholder="Ex. John" />
+              <input
+                matInput
+                placeholder="Ex. John"
+                required
+                [(ngModel)]="formData.firstName"
+                name="firstName"
+              />
             </mat-form-field>
             <mat-form-field>
               <mat-label>Last Name</mat-label>
-              <input matInput placeholder="Ex. Doe" />
+              <input
+                matInput
+                placeholder="Ex. Doe"
+                required
+                [(ngModel)]="formData.lastName"
+                name="lastName"
+              />
             </mat-form-field>
           </div>
           <div class="additional-info">
             <mat-form-field>
               <mat-label>Phone Number</mat-label>
-              <input matInput placeholder="Ex. 000-000-0000" />
+              <input
+                matInput
+                placeholder="Ex. 000-000-0000"
+                required
+                [(ngModel)]="formData.phone"
+                name="phone"
+              />
             </mat-form-field>
             <mat-form-field>
               <mat-label>Email</mat-label>
-              <input matInput placeholder="Ex. John.Doe@email.com" />
+              <input
+                matInput
+                type="email"
+                placeholder="Ex. John.Doe@email.com"
+                required
+                [(ngModel)]="formData.email"
+                name="email"
+              />
             </mat-form-field>
             <mat-form-field>
               <mat-label>Additional Info</mat-label>
               <textarea
                 matInput
                 placeholder="Ex. I would like more information on the following service..."
+                required
+                [(ngModel)]="formData.info"
+                name="info"
               ></textarea>
             </mat-form-field>
           </div>
           <div class="submit">
-            <button mat-flat-button (click)="onSubmit()">Submit</button>
+            <button mat-flat-button type="submit">Submit</button>
           </div>
         </div>
       </form>

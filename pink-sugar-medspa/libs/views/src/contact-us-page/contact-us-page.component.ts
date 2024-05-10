@@ -5,6 +5,15 @@ import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { EmailService } from 'libs/services/src/emailService/email.service';
+
+export type FormData = {
+  firstName: '';
+  lastName: '';
+  phone: '';
+  email: '';
+  info: '';
+};
 
 @Component({
   selector: 'app-contact-us-page',
@@ -20,5 +29,24 @@ import { MatIconModule } from '@angular/material/icon';
   ],
 })
 export class ContactUsPageComponent {
-  protected onSubmit() {}
+  protected formData: FormData = {
+    firstName: '',
+    lastName: '',
+    phone: '',
+    email: '',
+    info: '',
+  };
+
+  constructor(private emailService: EmailService) {}
+
+  protected onSubmit(form: FormData) {
+    const request = this.emailService.sendEmail(form);
+    request.then((res) => {
+      if (res.status === 200) {
+        window.location.reload();
+      } else {
+        throw new Error(`Message sending failed response code: ${res.status}`);
+      }
+    });
+  }
 }

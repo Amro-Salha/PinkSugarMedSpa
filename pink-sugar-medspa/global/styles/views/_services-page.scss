@@ -5,7 +5,34 @@ psm-services-page {
   height: 100%;
   position: relative;
   overflow-y: scroll;
-
+  .consultations {
+    width: 100%;
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 600;
+    padding: 3rem;
+    margin: 1rem;
+    margin-bottom: 0;
+  }
+  .booking-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-decoration: none;
+    padding: 3rem;
+    border: 0.5rem solid;
+    margin: 1rem;
+    border-radius: 1rem;
+    font-size: 2.4rem;
+    font-weight: 600;
+    background-color: #ffcce6;
+    cursor: pointer;
+  }
+  .booking-button:hover {
+    background-color: white;
+    transition: 200ms;
+  }
   .services-wrapper {
     width: 80%;
     height: 100%;

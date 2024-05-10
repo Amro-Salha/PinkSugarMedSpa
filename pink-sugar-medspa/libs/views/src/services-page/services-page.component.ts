@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ServiceComponent } from 'libs/components/src/service/service.component';
+import { MatIconModule } from '@angular/material/icon';
 
 export interface Service {
   serviceName: string;
@@ -14,7 +15,7 @@ export interface Service {
   selector: 'psm-services-page',
   templateUrl: './services-page.component.html',
   standalone: true,
-  imports: [CommonModule, ServiceComponent],
+  imports: [CommonModule, ServiceComponent, MatIconModule],
 })
 export class ServicesPageComponent {
   public services: Service[] = [
@@ -30,7 +31,7 @@ export class ServicesPageComponent {
         'FDA Approved',
       ],
       displayImage: 'assets/vybePhoto.webp',
-      price: 850,
+      price: 750,
     },
     {
       serviceName: 'SKINPEN Microneedling',
