@@ -1,137 +1,155 @@
-.contact-us-wrapper {
+psm-contact-us-page {
+  display: flex;
+  justify-content: center;
   width: 100%;
   height: 100%;
-  display: grid;
-  grid-template-columns: 4fr 3fr;
-  .contact-us-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 10rem;
-    .title {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 1rem;
+  .contact-us-wrapper {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    .spacer {
+      padding: 0;
     }
-    .contact-us-description {
-      font-weight: 600;
-      padding-bottom: 10rem;
-    }
-    .info {
-      font-size: 1.8rem;
-      font-weight: 600;
-      width: 100%;
+    .contact-us-text {
       display: flex;
-      justify-content: center;
-      align-items: center;
       flex-direction: column;
-      gap: 1rem;
-      padding-bottom: 5rem;
-      p {
-        display: flex;
-        align-items: center;
-        text-align: center;
-        padding: 0 1rem 0 1rem;
-        gap: 0.5rem;
-      }
-      .tagline {
-        font-style: italic;
-      }
-    }
-  }
-  .form-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 2rem;
-    .form-dialog {
-      height: 50rem;
-      width: 50rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: white;
-      box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.15);
-      border: 1px solid rgba(255, 239, 249, 0.5);
-      border-radius: 1rem;
-      .form {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        .name {
-          width: 100%;
+      justify-content: space-around;
+      padding: 0 8rem;
+      .title-with-description {
+        .title {
           display: flex;
           flex-direction: row;
-          justify-content: center;
+          align-items: center;
           gap: 1rem;
         }
-        .additional-info {
-          width: 100%;
+        .contact-us-description {
+          font-weight: 600;
+        }
+      }
+      .info {
+        font-size: 1.8rem;
+        font-weight: 600;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1rem;
+        padding-bottom: 5rem;
+        p {
+          display: flex;
+          align-items: center;
+          text-align: center;
+          padding: 0 1rem 0 1rem;
+          gap: 0.5rem;
+        }
+        .tagline {
+          font-style: italic;
+        }
+      }
+    }
+    .form-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 2rem;
+      .form-dialog {
+        height: 50rem;
+        width: 50rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.15);
+        border: 1px solid rgba(255, 239, 249, 0.5);
+        border-radius: 1rem;
+        .form {
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          mat-form-field {
-            width: 100%;
-          }
-          textarea {
-            resize: none;
-            height: 10rem;
-          }
-        }
-        .submit {
           width: 100%;
-          button {
-            width: 12rem;
-            background-color: #ff3787;
-            font-weight: 600;
-            .mdc-button__label {
-              color: white;
+          .name {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 1rem;
+          }
+          .additional-info {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            mat-form-field {
+              width: 100%;
+            }
+            textarea {
+              resize: none;
+              height: 10rem;
+            }
+          }
+          .submit {
+            width: 100%;
+            button {
+              width: 12rem;
+              background-color: #ff3787;
+              font-weight: 600;
+              .mdc-button__label {
+                color: white;
+              }
             }
           }
         }
       }
     }
   }
-}
 
-// Material Overrides
-.mdc-text-field--filled:not(.mdc-text-field--disabled) {
-  background-color: #ffeff9 !important;
-}
+  // Material Overrides
+  .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    background-color: #ffeff9 !important;
+  }
 
-@media (max-width: 900px) {
-  .contact-us-wrapper {
-    display: flex;
-    flex-direction: column;
-    .contact-us-text {
-      padding: 4rem;
-      .contact-us-description {
-        padding-bottom: 0;
+  @media (max-width: 900px) {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    .contact-us-wrapper {
+      display: flex;
+      flex-direction: column;
+      .spacer {
+        padding: 10rem;
       }
-      .info {
-        padding-top: 5rem;
+      .contact-us-text {
+        padding: 4rem;
+        .contact-us-description {
+          padding-bottom: 0;
+        }
+        .info {
+          padding-top: 5rem;
+          .tagline {
+            display: inline;
+          }
+        }
       }
-    }
-    .form-wrapper {
-      padding-bottom: 5rem;
-      margin-right: 0rem;
+      .form-wrapper {
+        padding-bottom: 5rem;
+        margin-right: 0rem;
+      }
     }
   }
-}
 
-@media (max-width: 500px) {
-  .contact-us-wrapper {
-    .form-wrapper {
-      .form-dialog {
-        width: 40rem;
-        height: 40rem;
-        .form {
-          height: 100%;
-          transform: scale(0.8);
+  @media (max-width: 500px) {
+    .contact-us-wrapper {
+      .form-wrapper {
+        .form-dialog {
+          width: 40rem;
+          height: 40rem;
+          .form {
+            height: 100%;
+            transform: scale(0.8);
+          }
         }
       }
     }

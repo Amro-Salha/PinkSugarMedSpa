@@ -17,7 +17,7 @@ psm-navbar {
   .outlet {
     display: flex;
     flex-grow: 1;
-    overflow: scroll;
+    overflow: hidden;
     background-color: #ffbcdf;
   }
   .navbar-wrapper {

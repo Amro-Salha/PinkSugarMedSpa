@@ -16,7 +16,7 @@ export type FormData = {
 };
 
 @Component({
-  selector: 'app-contact-us-page',
+  selector: 'psm-contact-us-page',
   templateUrl: './contact-us-page.component.html',
   standalone: true,
   imports: [

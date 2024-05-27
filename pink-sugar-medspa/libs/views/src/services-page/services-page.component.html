@@ -1,14 +1,16 @@
 <div class="services-wrapper">
-  <div class="consultations">
-    {{ "Complimentary consultations" | uppercase }}
-    <mat-icon fontIcon="favorite_border"></mat-icon>
+  <div class="booking">
+    <div class="consultations">
+      {{ "Complimentary consultations" | uppercase }}
+      <mat-icon fontIcon="favorite_border"></mat-icon>
+    </div>
+    <a
+      href="https://web2.myaestheticspro.com/BN/index.cfm?0C4D04F9B1291AF29A255397869213E1"
+      class="booking-button"
+      target="_blank"
+      >{{ "Click here to book now!" | uppercase }}</a
+    >
   </div>
-  <a
-    href="https://web2.myaestheticspro.com/BN/index.cfm?0C4D04F9B1291AF29A255397869213E1"
-    class="booking-button"
-    target="_blank"
-    >{{ "Click here to book now!" | uppercase }}</a
-  >
   <psm-service
     *ngFor="let service of services"
     [serviceName]="service.serviceName"
@@ -17,4 +19,5 @@
     [comingSoon]="service.comingSoon"
     [price]="service.price"
   ></psm-service>
+  <div class="spacer"></div>
 </div>
