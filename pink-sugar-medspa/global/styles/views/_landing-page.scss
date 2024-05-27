@@ -4,13 +4,26 @@ psm-landing-page {
   height: 100%;
   align-items: center;
   justify-content: center;
-  // .landing-wrapper {
-  //   width: 100%;
-  //   height: 100%;
-  //   display: grid;
-  //   grid-template-columns: repeat(2, 1fr);
-  //   align-items: center;
-  //   justify-content: center;
+  position: relative;
+  overflow: hidden;
+  .top-banner {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    justify-content: space-between;
+    top: 0;
+    width: 100%;
+    .banner-content {
+      display: inline-block;
+      white-space: nowrap;
+    }
+    .banner-tagline {
+      display: inline-flex;
+      gap: 1rem;
+      padding: 0 10rem;
+      font-weight: bold;
+    }
+  }
   .logo {
     height: 100%;
     width: 100%;
