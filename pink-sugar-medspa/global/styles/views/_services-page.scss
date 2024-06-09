@@ -5,10 +5,12 @@ psm-services-page {
   height: 100%;
   position: relative;
   overflow-y: scroll;
+  padding: 0.2rem;
   .booking {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
     .consultations {
       width: 100%;
       text-align: center;
@@ -17,25 +19,24 @@ psm-services-page {
       padding: 3rem;
       margin: 1rem;
       margin-bottom: 0;
+      font-style: italic;
     }
     .booking-button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
       width: 100%;
-      text-decoration: none;
       padding: 3rem;
-      border: 0.5rem solid;
       margin: 1rem;
-      border-radius: 1rem;
       font-size: 2.4rem;
+      background-color: #ff3787;
       font-weight: 600;
-      background-color: #ffcce6;
-      cursor: pointer;
+      .mdc-button__label {
+        color: white;
+      }
     }
-    .booking-button:hover {
-      background-color: white;
-      transition: 200ms;
+    .book-link {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      text-decoration: none;
     }
   }
   .services-wrapper {
@@ -44,18 +45,19 @@ psm-services-page {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 6rem;
 
     psm-service {
       display: flex;
       flex-direction: row;
       align-items: center;
-      border: 1px solid white;
+      border: 1px solid #ff3787;
       border-radius: 1rem;
       width: 100%;
       gap: 2rem;
-      background-color: #ffffff3d;
+      background-color: #ffffff;
       position: relative;
+      box-shadow: 0.5rem 0.5rem 2rem #00000017;
       img {
         border-radius: 1rem;
         max-width: 30rem;
@@ -106,6 +108,7 @@ psm-services-page {
       flex-direction: column;
       .booking-button {
         margin: 0;
+        width: 70%;
       }
       .consultations {
         margin: 0;
@@ -116,8 +119,10 @@ psm-services-page {
       psm-service {
         flex-direction: column;
         align-items: center;
+        padding: 1rem;
         .service-description {
           .title {
+            margin: auto;
             text-align: center;
           }
         }

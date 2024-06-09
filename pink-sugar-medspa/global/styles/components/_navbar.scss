@@ -1,4 +1,19 @@
 psm-navbar {
+  .book-link {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+  }
+  .booking-button {
+    padding: 2rem;
+    font-size: 1.6rem;
+    background-color: #ff3787 !important;
+    font-weight: 600;
+    .mdc-button__label {
+      color: white;
+    }
+  }
+
   .mat-drawer-side.mat-drawer-end {
     width: 100%;
   }

@@ -6,10 +6,13 @@
     </div>
     <a
       href="https://web2.myaestheticspro.com/BN/index.cfm?0C4D04F9B1291AF29A255397869213E1"
-      class="booking-button"
       target="_blank"
-      >{{ "Click here to book now!" | uppercase }}</a
+      class="book-link"
     >
+      <button mat-flat-button type="button" class="booking-button">
+        {{ "Book now" | uppercase }}
+      </button>
+    </a>
   </div>
   <psm-service
     *ngFor="let service of services"

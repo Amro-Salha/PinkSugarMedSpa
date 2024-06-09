@@ -10,6 +10,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { AppRoutingModule } from 'src/app/app-routing.module';
+import { ErrorDisplayComponent } from '../error-display/error-display.component';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'psm-navbar',
@@ -17,8 +19,10 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
   standalone: true,
   imports: [
     CommonModule,
+    ErrorDisplayComponent,
     MatSidenavModule,
     AppRoutingModule,
+    MatButtonModule,
     MatToolbarModule,
     MatIconModule,
   ],

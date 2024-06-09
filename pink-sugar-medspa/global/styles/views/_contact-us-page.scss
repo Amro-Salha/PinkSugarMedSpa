@@ -10,11 +10,13 @@ psm-contact-us-page {
     grid-template-columns: 4fr 3fr;
     .spacer {
       padding: 0;
+      display: none;
     }
     .contact-us-text {
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
+      justify-content: center;
+      gap: 8rem;
       padding: 0 8rem;
       .title-with-description {
         .title {
@@ -46,6 +48,7 @@ psm-contact-us-page {
         }
         .tagline {
           font-style: italic;
+          display: inline-block;
         }
       }
     }
@@ -120,17 +123,16 @@ psm-contact-us-page {
       flex-direction: column;
       .spacer {
         padding: 10rem;
+        display: block;
       }
       .contact-us-text {
         padding: 4rem;
+        gap: 4rem;
         .contact-us-description {
           padding-bottom: 0;
         }
         .info {
           padding-top: 5rem;
-          .tagline {
-            display: inline;
-          }
         }
       }
       .form-wrapper {

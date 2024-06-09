@@ -15,10 +15,7 @@ export class LandingPageComponent implements AfterViewInit {
   protected taglines: string[] = [
     'Cosmetic Aesthetics',
     'Contemporary Beauty x Advanced Science',
-    'Medical director',
-    'Cosmetic Aesthetics',
-    'Contemporary Beauty x Advanced Science',
-    'Medical director',
+    'Medical Director',
   ];
   @ViewChild('content', { static: true })
   protected content?: ElementRef;

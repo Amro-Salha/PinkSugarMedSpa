@@ -23,7 +23,9 @@
     "@angular/router": "^16.1.0",
     "emailjs-com": "^3.2.0",
     "gsap": "^3.12.4",
+    "ngx-slick-carousel": "^17.0.0",
     "rxjs": "~7.8.0",
+    "slick-carousel": "^1.8.1",
     "tslib": "^2.3.0",
     "vercel": "^33.0.1",
     "zone.js": "~0.13.0"

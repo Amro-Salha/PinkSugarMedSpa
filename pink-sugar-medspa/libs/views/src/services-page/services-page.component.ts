@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ServiceComponent } from 'libs/components/src/service/service.component';
 import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 export interface Service {
   serviceName: string;
@@ -15,7 +16,7 @@ export interface Service {
   selector: 'psm-services-page',
   templateUrl: './services-page.component.html',
   standalone: true,
-  imports: [CommonModule, ServiceComponent, MatIconModule],
+  imports: [CommonModule, ServiceComponent, MatButtonModule, MatIconModule],
 })
 export class ServicesPageComponent {
   public services: Service[] = [
