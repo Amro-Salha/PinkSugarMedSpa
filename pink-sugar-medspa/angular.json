@@ -26,9 +26,14 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "global/styles/psmTheme.scss",
-              "global/styles/styles.scss"
+              "global/styles/styles.scss",
+              "node_modules/slick-carousel/slick/slick.css",
+              "node_modules/slick-carousel/slick/slick-theme.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/slick-carousel/slick/slick.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -91,9 +96,14 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "global/styles/psmTheme.scss",
-              "global/styles/styles.scss"
+              "global/styles/styles.scss",
+              "node_modules/slick-carousel/slick/slick.css",
+              "node_modules/slick-carousel/slick/slick-theme.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/slick-carousel/slick/slick.min.js"
+            ]
           }
         }
       }

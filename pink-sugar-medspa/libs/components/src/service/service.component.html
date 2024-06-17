@@ -1,15 +1,64 @@
-<img src="{{ displayImage }}" />
+<ngx-slick-carousel class="carousel" [config]="slideConfig">
+  <div ngxSlickItem class="slide">
+    <div class="service-intro">
+      <img src="{{ displayImage }}" />
 
-<div class="service-description">
-  <div class="title">
-    <h1>{{ serviceName }} <mat-icon fontIcon="favorite_border"></mat-icon></h1>
-    <!-- <div class="pricetag">STARTING AT ${{ price ?? "PRICE" }}</div> -->
-  </div>
+      <div class="service-description">
+        <div class="title">
+          <h1>
+            {{ serviceName }} <mat-icon fontIcon="favorite_border"></mat-icon>
+          </h1>
+          <!-- <div class="pricetag">STARTING AT ${{ price ?? "PRICE" }}</div> -->
+        </div>
 
-  <div class="description">
-    <div class="bullet" *ngFor="let bulletPoint of serviceDescription">
-      <mat-icon fontIcon="favorite"></mat-icon>
-      <p>{{ bulletPoint }}</p>
+        <div class="description">
+          <div class="bullet" *ngFor="let bulletPoint of serviceDescription">
+            <mat-icon fontIcon="favorite"></mat-icon>
+            <p>{{ bulletPoint }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      *ngIf="workExamples?.length"
+      class="next-page {{ loading ? 'disabled' : '' }}"
+    >
+      <mat-progress-spinner
+        *ngIf="loading"
+        [color]="'accent'"
+        [mode]="'indeterminate'"
+        [diameter]="30"
+      ></mat-progress-spinner>
+      {{ "swipe for examples" | uppercase }}
+      <mat-icon fontIcon="keyboard_double_arrow_right"></mat-icon>
     </div>
   </div>
-</div>
+  <div ngxSlickItem *ngIf="workExamples?.length" class="slide">
+    <div class="work-examples-slide">
+      <ngx-slick-carousel
+        class="carousel child-carousel"
+        [config]="childSlideConfig"
+      >
+        <div
+          ngxSlickItem
+          *ngFor="let workExample of workExamples; let i = index"
+          class="slide example"
+        >
+          <a href="{{ workExample.href }}" target="_blank">
+            <div
+              id="{{ workExample.mediaSource }}-{{ i }}-embed"
+              class="media-embed"
+            ></div>
+          </a>
+        </div>
+      </ngx-slick-carousel>
+      <div class="arrows">
+        <button class="slick-prev prev-arrow" aria-label="Previous">
+          Previous
+        </button>
+        <div class="slick-dots dots"></div>
+        <button class="slick-next next-arrow" aria-label="Next">Next</button>
+      </div>
+    </div>
+  </div>
+</ngx-slick-carousel>

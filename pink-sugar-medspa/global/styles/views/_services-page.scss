@@ -48,62 +48,169 @@ psm-services-page {
     gap: 6rem;
 
     psm-service {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
+      width: 100%;
+      height: fit-content;
+      background-color: white;
       border: 1px solid #ff3787;
       border-radius: 1rem;
-      width: 100%;
-      gap: 2rem;
-      background-color: #ffffff;
-      position: relative;
       box-shadow: 0.5rem 0.5rem 2rem #00000017;
-      img {
-        border-radius: 1rem;
-        max-width: 30rem;
-        max-height: 30rem;
-        width: 30vw;
-        height: 30vw;
-        min-height: 30rem;
-        min-width: 30rem;
-        margin: 1rem;
-      }
-      .service-description {
-        display: flex;
-        flex-direction: column;
+      ngx-slick-carousel {
         width: 100%;
-        .title {
-          padding-bottom: 1rem;
+        height: 100%;
+        .slide {
+          position: relative;
           display: flex;
-          justify-content: space-between;
-        }
-        .description {
-          display: flex;
-          width: 100%;
           flex-direction: column;
-          font-weight: 600;
-          padding: 1rem;
-          .bullet {
+          .service-intro {
             display: flex;
             flex-direction: row;
-            mat-icon {
-              font-size: 10px;
-              overflow: visible;
-              padding-top: 0.5rem;
-              padding-right: 0.2rem;
+            align-items: flex-start;
+            width: 100%;
+            gap: 2rem;
+            img {
+              border-radius: 1rem;
+              max-width: 30rem;
+              max-height: 30rem;
+              width: 30vw;
+              height: 30vw;
+              min-height: 30rem;
+              min-width: 30rem;
+              margin: 1rem;
             }
+            .service-description {
+              display: flex;
+              flex-direction: column;
+              width: 100%;
+              .title {
+                padding: 1rem 0;
+                display: flex;
+                justify-content: space-between;
+              }
+              .description {
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+                font-weight: 600;
+                padding: 1rem;
+                .bullet {
+                  display: flex;
+                  flex-direction: row;
+                  mat-icon {
+                    font-size: 10px;
+                    overflow: visible;
+                    padding-top: 0.5rem;
+                    padding-right: 0.2rem;
+                  }
+                }
+              }
+            }
+          }
+          .next-page {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            font-size: 2.4rem;
+            padding-right: 1rem;
+            padding-bottom: 1rem;
+            mat-progress-spinner {
+              margin-right: 1rem;
+            }
+            mat-icon {
+              font-size: 3.6rem;
+              height: fit-content;
+              width: fit-content;
+            }
+          }
+          .work-examples-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            .child-carousel {
+              border: none;
+              box-shadow: none;
+              width: 100%;
+              height: 100%;
+              margin: 0;
+              .slide {
+                flex-direction: unset;
+              }
+              .example {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+              }
+              .tiktok-embed {
+                margin: 0;
+                #embed-video-container {
+                  width: 323px !important;
+                }
+              }
+              .media-embed {
+                border-radius: 5rem;
+                box-shadow: #ff3787 0px 0px 100px 0px;
+                transform: scale(0.75);
+                blockquote {
+                  border-radius: 5rem;
+                  height: 575px;
+                  iframe {
+                    height: 500px;
+                  }
+                }
+              }
+            }
+            .arrows {
+              display: flex;
+              flex-direction: row;
+              width: 24rem;
+              align-items: center;
+              justify-content: center;
+              height: fit-content;
+              position: absolute;
+              bottom: 2rem;
+              z-index: 10000000000000;
+              .slick-next {
+                right: 10px;
+                transform: scale(2);
+                position: relative;
+              }
+              .dots {
+                position: relative;
+                bottom: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .slick-dots {
+                  bottom: 0;
+                  position: relative;
+                  display: flex;
+                  justify-content: center;
+                }
+              }
+              .slick-prev {
+                left: 10px;
+                transform: scale(2);
+                position: relative;
+              }
+              .slick-prev:before,
+              .slick-next:before {
+                color: #ff3787;
+              }
+            }
+          }
+          .pricetag {
+            font-weight: 600;
+            font-size: 1.8rem;
+            text-align: center;
+            padding-right: 2rem;
           }
         }
       }
-      .pricetag {
-        font-weight: 600;
-        font-size: 1.8rem;
-        text-align: center;
-        padding-right: 2rem;
-      }
     }
   }
-  @media (max-width: 900px) {
+  @media (max-width: 925px) {
     .booking {
       flex-direction: column;
       .booking-button {
@@ -117,13 +224,19 @@ psm-services-page {
     .services-wrapper {
       width: 100%;
       psm-service {
-        flex-direction: column;
-        align-items: center;
-        padding: 1rem;
-        .service-description {
-          .title {
-            margin: auto;
-            text-align: center;
+        ngx-slick-carousel {
+          .slide {
+            .service-intro {
+              flex-direction: column;
+              align-items: center;
+              padding: 1rem;
+              .service-description {
+                .title {
+                  margin: auto;
+                  text-align: center;
+                }
+              }
+            }
           }
         }
       }

@@ -1,7 +1,7 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-	y="0px" width="100%" viewBox="-10000 -10000 25027 25320" enable-background="new -10000 -10000 25027 25320"
-	xml:space="preserve">
-	<path fill="#FF3787" opacity="0.500000" stroke="none" d="
+	y="0px" width="100px" height="100px" viewBox="0 0 12000 12000" enable-background="new 0 0 200 200"
+	xml:space="preserve" preserveAspectRatio="xMinYMin meet">
+	<path fill="#FF3787" opacity="0.075000000" stroke="none" d="
 M5032.000000,208.000000
 	C5032.000000,252.083572 5032.000000,296.167145 5030.858398,340.899780
 	C5026.778320,347.397339 5023.437988,353.081726 5020.971680,359.122620

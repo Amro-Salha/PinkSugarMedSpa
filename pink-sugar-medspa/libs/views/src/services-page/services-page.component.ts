@@ -1,16 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ServiceComponent } from 'libs/components/src/service/service.component';
+import {
+  Service,
+  ServiceComponent,
+} from 'libs/components/src/service/service.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-
-export interface Service {
-  serviceName: string;
-  serviceDescription: string[];
-  comingSoon?: boolean;
-  displayImage: string;
-  price?: number;
-}
 
 @Component({
   selector: 'psm-services-page',
@@ -33,6 +28,41 @@ export class ServicesPageComponent {
       ],
       displayImage: 'assets/vybePhoto.webp',
       price: 750,
+      workExamples: [
+        {
+          mediaSource: 'tiktok',
+          scriptSrc: 'https://www.tiktok.com/embed.js',
+          embedCode: `
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@pinksugarmedspa/video/7376376711627296046" data-video-id="7376376711627296046" style="max-width: 323px;min-width: 323px;" >
+            <section></section>
+          </blockquote>`,
+          href: 'https://www.tiktok.com/@pinksugarmedspa/video/7376376711627296046',
+        },
+        {
+          mediaSource: 'tiktok',
+          scriptSrc: 'https://www.tiktok.com/embed.js',
+          embedCode: `<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@pinksugarmedspa/video/7380048223567629614" data-video-id="7380048223567629614" style="max-width: 323px;min-width: 323px;" > <section></section> </blockquote>`,
+          href: 'https://www.tiktok.com/@pinksugarmedspa/video/7380048223567629614',
+        },
+        {
+          mediaSource: 'tiktok',
+          scriptSrc: 'https://www.tiktok.com/embed.js',
+          embedCode: `<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@pinksugarmedspa/video/7380444221620178218" data-video-id="7380444221620178218" style="max-width: 323px;min-width: 323px;" > <section> </section> </blockquote>`,
+          href: 'https://www.tiktok.com/@pinksugarmedspa/video/7380444221620178218',
+        },
+        {
+          mediaSource: 'tiktok',
+          scriptSrc: 'https://www.tiktok.com/embed.js',
+          embedCode: `<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@pinksugarmedspa/video/7366752222425730347" data-video-id="7366752222425730347" style="max-width: 323px;min-width: 323px;" > <section> </section> </blockquote>`,
+          href: 'https://www.tiktok.com/@pinksugarmedspa/video/7366752222425730347',
+        },
+        {
+          mediaSource: 'tiktok',
+          scriptSrc: 'https://www.tiktok.com/embed.js',
+          embedCode: `<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@pinksugarmedspa/video/7370427845799103787" data-video-id="7370427845799103787" style="max-width: 323px;min-width: 323px;" > <section> </section> </blockquote>`,
+          href: 'https://www.tiktok.com/@pinksugarmedspa/video/7370427845799103787',
+        },
+      ],
     },
     {
       serviceName: 'SKINPEN Microneedling',
