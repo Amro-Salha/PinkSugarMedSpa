@@ -1,8 +1,11 @@
 import {
+  AfterContentInit,
+  AfterViewChecked,
   AfterViewInit,
   Component,
   ElementRef,
   Input,
+  OnInit,
   Renderer2,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -37,7 +40,7 @@ export interface WorkExample {
     SlickCarouselModule,
   ],
 })
-export class ServiceComponent implements AfterViewInit {
+export class ServiceComponent {
   protected slideConfig = {
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -102,13 +105,21 @@ export class ServiceComponent implements AfterViewInit {
   @Input()
   public workExamples?: WorkExample[];
 
-  constructor(private renderer: Renderer2, private el: ElementRef) {}
-
-  ngAfterViewInit(): void {
-    //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
-    //Add 'implements AfterViewInit' to the class.
-    this.loadWorkExamples();
+  constructor(private renderer: Renderer2, private el: ElementRef) {
+    // this.loadWorkExamples();
   }
+
+  // ngAfterViewChecked(): void {
+  //   //Called after every check of the component's view. Applies to components only.
+  //   //Add 'implements AfterViewChecked' to the class.
+  //   this.loadWorkExamples();
+  // }
+
+  // ngOnInit(): void {
+  //   //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+  //   //Add 'implements OnInit' to the class.
+  //   this.loadWorkExamples();
+  // }
 
   private loadWorkExamples() {
     if (!this.workExamples) {

@@ -52,13 +52,13 @@ export class ContactUsPageComponent {
         throw new Error('Form is missing required values');
       }
     }
-    // const request = this.emailService.sendEmail(form);
-    // request.then((res) => {
-    //   if (res.status === 200) {
-    //     window.location.reload();
-    //   } else {
-    //     throw new Error(`Message sending failed response code: ${res.status}`);
-    //   }
-    // });
+    const request = this.emailService.sendEmail(form);
+    request.then((res) => {
+      if (res.status === 200) {
+        window.location.reload();
+      } else {
+        throw new Error(`Message sending failed response code: ${res.status}`);
+      }
+    });
   }
 }
